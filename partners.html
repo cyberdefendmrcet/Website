@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners - Cyber Defend 2025</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/terminal.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav x-data="{ open: false }" class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="assets/images/logo.png" alt="Cyber Defend Logo" class="h-10 w-10">
+          <span class="text-xl font-bold text-cyber">Cyber Defend 2025</span>
+        </a>
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-white hover:text-cyber">Home</a>
+          <a href="sponsors.html" class="text-white hover:text-cyber">Sponsors</a>
+          <a href="partners.html" class="text-white hover:text-cyber">Partners</a>
+          <a href="schedule.html" class="text-white hover:text-cyber">Schedule</a>
+          <a href="gallery.html" class="text-white hover:text-cyber">Gallery</a>
+          <a href="contact.html" class="text-white hover:text-cyber">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button @click="open = !open" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div x-show="open" class="md:hidden bg-black/90">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block text-white hover:text-cyber">Home</a>
+        <a href="sponsors.html" class="block text-white hover:text-cyber">Sponsors</a>
+        <a href="partners.html" class="block text-white hover:text-cyber">Partners</a>
+        <a href="schedule.html" class="block text-white hover:text-cyber">Schedule</a>
+        <a href="gallery.html" class="block text-white hover:text-cyber">Gallery</a>
+        <a href="contact.html" class="block text-white hover:text-cyber">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header text-center py-20 bg-gray-900 text-white">
+    <h1 class="text-4xl font-bold text-cyber">Our Partners</h1>
+  </header>
+  <!-- Partners Grid -->
+  <main class="container mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Partner 1 -->
+      <div class="partner-card bg-gray-800 p-6 rounded text-center">
+        <img src="assets/images/partner1.png" alt="Partner 1 Logo" class="mx-auto h-20 mb-4">
+        <h2 class="text-xl font-semibold text-cyber mb-2">Partner 1</h2>
+        <p>Strategic partner in cybersecurity training and research.</p>
+      </div>
+      <!-- Partner 2 -->
+      <div class="partner-card bg-gray-800 p-6 rounded text-center">
+        <img src="assets/images/partner2.png" alt="Partner 2 Logo" class="mx-auto h-20 mb-4">
+        <h2 class="text-xl font-semibold text-cyber mb-2">Partner 2</h2>
+        <p>Collaborative partner for innovative security solutions.</p>
+      </div>
+      <!-- Partner 3 -->
+      <div class="partner-card bg-gray-800 p-6 rounded text-center">
+        <img src="assets/images/partner3.png" alt="Partner 3 Logo" class="mx-auto h-20 mb-4">
+        <h2 class="text-xl font-semibold text-cyber mb-2">Partner 3</h2>
+        <p>Global partner providing expertise in threat intelligence.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; Cyber Defend. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

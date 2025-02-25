@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Defend</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Global Styles & Terminal Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/terminal.css">
+  <!-- Tailwind CSS & AlpineJS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Terminal Preloader (executed by preloader.js) -->
+  <script src="assets/js/terminal.js"></script>
+  <script src="assets/js/preloader.js"></script>
+  
+  <!-- Navigation -->
+  <nav x-data="{ open: false }" class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="assets/images/logo.png" alt="CyberDefend" class="h-10 w-10">
+          <span class="text-xl font-bold text-cyber">Cyber Defend</span>
+        </a>
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-white hover:text-cyber">Home</a>
+          <a href="sponsors.html" class="text-white hover:text-cyber">Sponsors</a>
+          <a href="partners.html" class="text-white hover:text-cyber">Partners</a>
+          <a href="schedule.html" class="text-white hover:text-cyber">Schedule</a>
+          <a href="gallery.html" class="text-white hover:text-cyber">Gallery</a>
+          <a href="contact.html" class="text-white hover:text-cyber">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button @click="open = !open" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div x-show="open" class="md:hidden bg-black/90">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block text-white hover:text-cyber">Home</a>
+        <a href="sponsors.html" class="block text-white hover:text-cyber">Sponsors</a>
+        <a href="partners.html" class="block text-white hover:text-cyber">Partners</a>
+        <a href="schedule.html" class="block text-white hover:text-cyber">Schedule</a>
+        <a href="gallery.html" class="block text-white hover:text-cyber">Gallery</a>
+        <a href="contact.html" class="block text-white hover:text-cyber">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section flex items-center justify-center h-screen relative overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="relative text-center text-white z-10">
+      <h1 class="text-5xl font-bold mb-4">Cyber Defend 2025</h1>
+      <p class="text-xl mb-8">Empowering the Next Generation of Cyber Guardians</p>
+      <div class="event-details grid grid-cols-1 md:grid-cols-4 gap-4 text-left max-w-4xl mx-auto">
+        <div class="p-4 bg-gray-800 rounded">
+          <h2 class="text-cyber font-semibold">Day 1</h2>
+          <p>Inaugural</p>
+        </div>
+        <div class="p-4 bg-gray-800 rounded">
+          <h2 class="text-cyber font-semibold">Day 2</h2>
+          <p>Workshops / Seminars</p>
+        </div>
+        <div class="p-4 bg-gray-800 rounded">
+          <h2 class="text-cyber font-semibold">Day 3</h2>
+          <p>Capture The Flag [CTF]</p>
+        </div>
+        <div class="p-4 bg-gray-800 rounded">
+          <h2 class="text-cyber font-semibold">Day 4</h2>
+          <p>Hackathon</p>
+        </div>
+      </div>
+      <a href="schedule.html" class="mt-8 inline-block px-6 py-3 bg-cyber text-black font-bold rounded hover:bg-cyber-light transition">View Schedule</a>
+    </div>
+    <!-- Particle.js Canvas (optional for animated background) -->
+    <canvas id="particles" class="absolute inset-0"></canvas>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="intro py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-cyber mb-4">About the Event</h2>
+      <p class="mb-4">Join us at Cyber Defend 2025 for a deep dive into the latest in cybersecurity. Over four exciting days, you'll experience insightful keynotes, interactive workshops, competitive CTF challenges, and an adrenaline-pumping hackathon.</p>
+      <p>Meet top sponsors, collaborative partners, and dedicated coordinators while immersing yourself in a cyber environment.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; Cyber Defend. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Custom Scripts -->
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
