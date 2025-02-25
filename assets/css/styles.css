@@ -1,0 +1,137 @@
+/* Global Styles for Cyber Defend */
+
+:root {
+    --bg-color: #0a0a0a;
+    --accent-color: #00fff2;
+    --text-color: #7fdbff;
+    --secondary-color: #0088cc;
+    --cyber: #00fff2;
+    --cyber-light: #66fff2;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Navigation */
+  nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav a {
+    transition: color 0.3s;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    background: url('../images/hero-bg.jpg') center center/cover no-repeat;
+  }
+  
+  /* Event Details */
+  .event-details > div {
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+  }
+  
+  /* Timeline for Schedule */
+  .timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-color);
+  }
+  .timeline-item {
+    position: relative;
+    margin: 2rem 0;
+    width: 45%;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+  }
+  .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  .timeline-item:nth-child(even) {
+    left: 55%;
+  }
+  .timeline-icon {
+    position: absolute;
+    top: 1rem;
+    left: -1.5rem;
+    width: 30px;
+    height: 30px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    font-size: 1rem;
+  }
+  
+  /* Gallery */
+  .gallery-item img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Custom Cursor */
+  .security-cursor, .security-cursor-ring {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .security-cursor {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+  }
+  .security-cursor-ring {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--accent-color);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .security-cursor.scanning {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  .ripple {
+    position: fixed;
+    background: var(--accent-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: ripple-animation 1s ease-out;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes ripple-animation {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(5);
+    }
+  }
+  
