@@ -1,0 +1,198 @@
+:root {
+    /* Refined Blue Ice Theme */
+    --primary-blue: #00fff2;      /* Bright cyan for main elements */
+    --secondary-blue: #0088cc;    /* Medium blue for secondary elements */
+    --dark-blue: #001829;         /* Deep background blue */
+    --darker-blue: #000c14;       /* Even darker blue for contrast */
+    --text-blue: #7fdbff;         /* Light blue for text */
+    --white: #ffffff;            /* Pure white for highlights */
+}
+
+.terminal-window {
+    background: var(--dark-blue);
+    border: 1px solid var(--primary-blue);
+    box-shadow: 0 0 20px rgba(0, 255, 242, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.terminal-header {
+    background: var(--dark-blue);
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--secondary-blue);
+}
+
+.system-status {
+    color: var(--text-blue);
+}
+
+.status-indicator {
+    background: var(--primary-blue);
+    box-shadow: 0 0 10px var(--primary-blue);
+}
+
+.terminal-title {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* SEASIDES Banner */
+.seasides-banner {
+    background: var(--dark-blue);
+    padding: 20px;
+    border-bottom: 1px solid var(--secondary-blue);
+}
+
+.banner-line {
+    color: var(--primary-blue);
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 12px;
+    text-shadow: 0 0 10px var(--primary-blue);
+}
+
+.banner-tagline {
+    color: var(--text-blue);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.banner-details {
+    color: var(--white);
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Status Grid */
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.grid-cell {
+    background: var(--dark-blue);
+    padding: 15px;
+    border-left: 3px solid var(--secondary-blue);
+    color: var(--text-blue);
+    font-size: 14px;
+}
+
+.grid-cell.updating {
+    border-left-color: var(--primary-blue);
+    background: rgba(0, 255, 242, 0.05);
+}
+
+/* Terminal Content */
+.terminal-content {
+    padding: 20px;
+    background: var(--darker-blue);
+}
+
+.line {
+    margin: 8px 0;
+    color: var(--text-blue);
+}
+
+.timestamp {
+    color: var(--secondary-blue);
+}
+
+.system-msg {
+    color: var(--white);
+}
+
+/* Animations */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 242, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 255, 242, 0.8);
+    }
+}
+
+/* Scan Line */
+.scan-line {
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-blue),
+        transparent
+    );
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .terminal-window {
+        margin: 10px;
+    }
+    
+    .banner-line {
+        font-size: 24px;
+        letter-spacing: 8px;
+    }
+    
+    .grid-cell {
+        padding: 12px;
+        font-size: 12px;
+    }
+    
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Preloader Overlay */
+.preloader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--darker-blue);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preloader {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px;
+}
+
+#terminal-preloader {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+/* Remove loader animations */
+.loader-container,
+.progress-ring,
+.hexagon-loader {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #preloader {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    #terminal-preloader {
+        max-height: 70vh;
+    }
+}
