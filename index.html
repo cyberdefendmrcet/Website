@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Defend</title>
+  <title>Cyber Defend 2025</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <!-- Global Styles & Terminal Styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/terminal.css">
-  <!-- Tailwind CSS & AlpineJS -->
+  <!-- NOTE: The following Tailwind CSS CDN is for development purposes only.
+       For production, build Tailwind using PostCSS or the Tailwind CLI and reference your compiled CSS file.
+       See: https://tailwindcss.com/docs/installation -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- FontAwesome Icons -->
@@ -19,40 +21,61 @@
   <script src="assets/js/terminal.js"></script>
   <script src="assets/js/preloader.js"></script>
   
-  <!-- Navigation -->
-  <nav x-data="{ open: false }" class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/images/logo.png" alt="CyberDefend" class="h-10 w-10">
-          <span class="text-xl font-bold text-cyber">Cyber Defend</span>
-        </a>
-        <div class="hidden md:flex space-x-6">
-          <a href="index.html" class="text-white hover:text-cyber">Home</a>
-          <a href="sponsors.html" class="text-white hover:text-cyber">Sponsors</a>
-          <a href="partners.html" class="text-white hover:text-cyber">Partners</a>
-          <a href="schedule.html" class="text-white hover:text-cyber">Schedule</a>
-          <a href="gallery.html" class="text-white hover:text-cyber">Gallery</a>
-          <a href="contact.html" class="text-white hover:text-cyber">Contact</a>
-        </div>
-        <div class="md:hidden">
-          <button @click="open = !open" class="text-white focus:outline-none">
-            <i class="fas fa-bars text-2xl"></i>
-          </button>
-        </div>
+<!-- Updated Navigation -->
+<nav x-data="{ open: false }" class="fixed top-0 w-full bg-black bg-opacity-90 backdrop-blur-lg z-50 shadow-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="assets/images/logo.png" alt="Cyber Defend" class="h-10 w-10">
+        <span class="text-xl font-bold text-white-800">Cyber Defend</span>
+      </a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-white-800 hover:text-cyber">Home</a>
+        <a href="sponsors.html" class="text-white-800 hover:text-cyber">Sponsors</a>
+        <a href="partners.html" class="text-white-800 hover:text-cyber">Partners</a>
+        <a href="schedule.html" class="text-white-800 hover:text-cyber">Schedule</a>
+        <a href="gallery.html" class="text-white-800 hover:text-cyber">Gallery</a>
+        <a href="contact.html" class="text-white-800 hover:text-cyber">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <button @click="open = !open" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
     </div>
-    <div x-show="open" class="md:hidden bg-black/90">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="index.html" class="block text-white hover:text-cyber">Home</a>
-        <a href="sponsors.html" class="block text-white hover:text-cyber">Sponsors</a>
-        <a href="partners.html" class="block text-white hover:text-cyber">Partners</a>
-        <a href="schedule.html" class="block text-white hover:text-cyber">Schedule</a>
-        <a href="gallery.html" class="block text-white hover:text-cyber">Gallery</a>
-        <a href="contact.html" class="block text-white hover:text-cyber">Contact</a>
+  </div>
+  <div x-show="open" class="md:hidden bg-white bg-opacity-70">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="index.html" class="block text-gray-800 hover:text-cyber">Home</a>
+      <a href="sponsors.html" class="block text-gray-800 hover:text-cyber">Sponsors</a>
+      <a href="partners.html" class="block text-gray-800 hover:text-cyber">Partners</a>
+      <a href="schedule.html" class="block text-gray-800 hover:text-cyber">Schedule</a>
+      <a href="gallery.html" class="block text-gray-800 hover:text-cyber">Gallery</a>
+      <a href="contact.html" class="block text-gray-800 hover:text-cyber">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Updated Static Top Logos Section with Aspect Ratio Preservation -->
+<section class="top-logos py-6 bg-white">
+  <div class="container mx-auto px-5">
+    <h2 class="text-center text-gray-800 text-xl font-bold mb-4">Our Partners & College</h2>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
+      <div class="logo-item pt-4">
+        <img src="assets/images/college-logo.png" alt="College Logo" class="h-16 w-auto object-contain transition-transform duration-300 hover:scale-150">
+      </div>
+      <div class="logo-item pt-4">
+        <img src="assets/images/partner1-logo.png" alt="Partner Logo 1" class="h-16 w-auto object-contain transition-transform duration-300 hover:scale-150">
+      </div>
+      <div class="logo-item pt-4">
+        <img src="assets/images/associated-logo.png" alt="Associated Partners Logo" class="h-16 w-auto object-contain transition-transform duration-300 hover:scale-150">
+      </div>
+      <div class="logo-item pt-4">
+        <img src="assets/images/partner2-logo.png" alt="Partner Logo 2" class="h-16 w-auto object-contain transition-transform duration-300 hover:scale-150">
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
   <!-- Hero Section -->
   <header class="hero-section flex items-center justify-center h-screen relative overflow-hidden">
@@ -78,7 +101,9 @@
           <p>Hackathon</p>
         </div>
       </div>
-      <a href="schedule.html" class="mt-8 inline-block px-6 py-3 bg-cyber text-black font-bold rounded hover:bg-cyber-light transition">View Schedule</a>
+      <a href="schedule.html" class="mt-8 inline-block px-6 py-3 bg-white text-black font-bold rounded shadow-lg hover:bg-gray-200 transition">
+        View Schedule
+      </a>
     </div>
     <!-- Particle.js Canvas (optional for animated background) -->
     <canvas id="particles" class="absolute inset-0"></canvas>
@@ -93,10 +118,48 @@
     </div>
   </section>
 
+  <!-- Event Team Section -->
+  <section class="event-team py-16 bg-gray-800 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-cyber mb-8">Event Team</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold text-cyber">CHIEF PATRON</h3>
+          <p>Sri .Ch. Malla Reddy<br>Chairman, MRGI</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-cyber">PARTON</h3>
+          <p>Sri. Ch. Mahender Reddy<br>Dr. Ch. Bhadra Reddy</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-cyber">CONVENORS</h3>
+          <p>Dr. V SK Reddy, Director<br>Dr. S. Srinivasa Rao, Principal</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-cyber">CO-CONVENORS</h3>
+          <p>Dr. D.Sujatha, Dean(CSE, ET)</p>
+        </div>
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-bold text-cyber">Organizing Committee</h3>
+          <p>Dr. T. Venu Gopal, Dean Student Welfare<br>Dr. M.V.Kamal, ET-HOD</p>
+        </div>
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-bold text-cyber">Event Coordinator</h3>
+          <p>Dr. I.Nagaraju - Professor<br>Dr. K.Sateesh - Professor<br>Mrs. P Satyavati, Asst. Professor<br>Mr. A Anvesh, Asst. Professor<br>Mr. G Ranjith, Asst. Professor</p>
+        </div>
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-bold text-cyber">Student Coordinators</h3>
+          <p>Shashank Chatla - IV-CYS<br>S. Sarfaraz - IV-CYS<br>R. Abhinay - III-CYS<br>K. Bharadwaj - IV-CYS<br>A. Rushikesh - III-CYS<br>B. Venkatesh - III DS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-black text-gray-400 py-8">
     <div class="container mx-auto px-4 text-center">
-      <p>&copy; Cyber Defend. All rights reserved.</p>
+      <p>&copy; 2025 Cyber Defend. All rights reserved.</p>
+      <p class="text-xs mt-2">developed by Shashank</p>
     </div>
   </footer>
 
