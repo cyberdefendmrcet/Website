@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon - Cyber Defend 2025</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Global Styles & Terminal Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/terminal.css">
+  <!-- Tailwind CSS & AlpineJS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav x-data="{ open: false }" class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="assets/images/logo.png" alt="Cyber Defend Logo" class="h-10 w-10">
+          <span class="text-xl font-bold text-cyber">Cyber Defend 2025</span>
+        </a>
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-white hover:text-cyber">Home</a>
+          <a href="sponsors.html" class="text-white hover:text-cyber">Coordinators</a>
+          <a href="partners.html" class="text-white hover:text-cyber">Partners</a>
+          <a href="schedule.html" class="text-white hover:text-cyber">Schedule</a>
+          <a href="gallery.html" class="text-white hover:text-cyber">Gallery</a>
+          <a href="contact.html" class="text-white hover:text-cyber">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button @click="open = !open" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div x-show="open" class="md:hidden bg-black/90">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block text-white hover:text-cyber">Home</a>
+        <a href="sponsors.html" class="block text-white hover:text-cyber">Coordinators</a>
+        <a href="partners.html" class="block text-white hover:text-cyber">Partners</a>
+        <a href="schedule.html" class="block text-white hover:text-cyber">Schedule</a>
+        <a href="gallery.html" class="block text-white hover:text-cyber">Gallery</a>
+        <a href="contact.html" class="block text-white hover:text-cyber">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header text-center py-24 bg-gray-900 text-white">
+    <h1 class="text-4xl font-bold text-cyber">Internal Cybersecurity Hackathon</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-16">
+    <!-- Hackathon Overview -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We are excited to announce that our Department of Cybersecurity is hosting an internal Cybersecurity Hackathon—a dynamic, multi-day event. This isn’t a typical 24-hour hackathon; you will have ample time throughout the days to refine your project and showcase your innovation.
+      </p>
+    </section>
+
+    <!-- Event Themes -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Event Themes Include:</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Digital Forensics & Cybercrime Investigation</li>
+        <li>Law Enforcement Cybersecurity Awareness & Training</li>
+        <li>Smart Policing & Digital Evidence Management</li>
+        <li>Child Safety & Online Predators Monitoring</li>
+        <li>Ransomware & Cyber Extortion Response</li>
+        <li>AI-Powered Fraud & Scam Detection</li>
+        <li>Cyber Threat Intelligence & Dark Web Monitoring</li>
+        <li>Open Category: Propose innovative solutions that directly enhance police operations and cybersecurity measures.</li>
+      </ul>
+    </section>
+
+    <!-- Team Structure -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Team Structure</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Team Size: 2 to 5 members</li>
+      </ul>
+    </section>
+
+    <!-- Hackathon Planning Timeline -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Hackathon Planning Timeline</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li><strong>03/03/2025:</strong> Submissions Start</li>
+        <li><strong>05/03/2025:</strong> Submissions End</li>
+        <li><strong>07/03/2025:</strong> Round 1 Qualified Announced (online mails will be sent)</li>
+        <li><strong>08/03/2025:</strong> Round 2 Final Showdown – Winners Announced (offline; expert from TSPA will be the jury)</li>
+      </ul>
+    </section>
+
+    <!-- How to Participate -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">How to Participate</h2>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2">
+        <li>
+          <strong>Register</strong> by filling out the provided 
+          <a href="https://forms.gle/danF874tcHn9BjRXA" class="text-cyber underline">Google Form</a>.
+        </li>
+        <li>
+          <strong>Select your preferred theme.</strong> (If you choose the Open Category, ensure your proposal clearly demonstrates how it supports police and cybersecurity initiatives.)
+        </li>
+        <li>
+          <strong>Submit a brief project overview</strong> along with any supporting documents.
+        </li>
+      </ol>
+      <p class="mt-4 text-gray-700">
+        For any queries, please contact <strong>Rushikesh | Abhinay</strong> at <strong>+91 8686144425 | +91 8686144425</strong>.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Cyber Defend. All rights reserved.</p>
+      <p class="text-xs mt-2">developed by Shashank</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
